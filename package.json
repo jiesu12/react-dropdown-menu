@@ -1,6 +1,6 @@
 {
   "name": "@jiesu12/react-dropdown-menu",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "lib/DropdownMenu.js",
   "scripts": {
