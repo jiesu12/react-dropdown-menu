@@ -4,7 +4,8 @@ import './DropdownMenu.scss'
 export interface MenuItem {
   key: string
   display?: React.ReactNode
-  onClick: () => void
+  onClick?: () => void
+  disabled?: boolean
 }
 
 interface Props {
@@ -56,11 +57,11 @@ const DropdownMenu = ({ title, menuItems, showTitle = true, rightHandSide = true
       >
         {menuItems.map((item) => (
           <div
-            className='menu-item'
+            className={`menu-item ${item.disabled ? 'disabled' : ''}`}
             key={item.key}
             onClick={() => {
               setOpen(false)
-              item.onClick()
+              item.onClick && item.onClick()
             }}
           >
             {item.display || item.key}

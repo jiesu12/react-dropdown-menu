@@ -44,7 +44,14 @@
       cursor: pointer;
       padding: 3px;
       color: black;
-      &:hover {
+      &.disabled {
+        cursor: auto;
+        color: gray;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      &:not(.disabled):hover {
         text-decoration: underline;
       }
     }
